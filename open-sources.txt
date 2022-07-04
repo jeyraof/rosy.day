@@ -5,3 +5,5 @@
 - Toss Face Emoji Image
   - static/icon-palette.png
   - 사용할 이미지들을 모아 하나로 합쳤습니다.
+- PhotoSwipe
+  - 타일 이미지의 확대 부분

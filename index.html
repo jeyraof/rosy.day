@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>이재영 ♥ 조소영 결혼합니다</title>
     <link rel="stylesheet" href="./static/style.css" />
+    <link rel="stylesheet" href="./static/photoswipe.css" />
     <link rel="icon" type="image/png" href="./static/favicon.png" />
   </head>
   <body>
@@ -116,7 +117,7 @@
         <!-- 1 -->
         <div class="photoset-row">
           <figure class="photoset-item">
-            <a href="#">
+            <a href="https://loremflickr.com/640/360?1">
               <img src="./static/placeholder.png" data-ratio="1.3333" data-src="https://loremflickr.com/640/360?1" />
             </a>
           </figure>
@@ -125,12 +126,12 @@
         <!-- 2 -->
         <div class="photoset-row">
           <figure class="photoset-item">
-            <a href="#">
+            <a href="https://loremflickr.com/640/360?2">
               <img src="./static/placeholder.png" data-ratio="0.6667" data-src="https://loremflickr.com/640/360?2" />
             </a>
           </figure>
           <figure class="photoset-item">
-            <a href="#">
+            <a href="https://loremflickr.com/640/360?3">
               <img src="./static/placeholder.png" data-ratio="1.1123" data-src="https://loremflickr.com/640/360?3" />
             </a>
           </figure>
@@ -139,17 +140,17 @@
         <!-- 3 -->
         <div class="photoset-row">
           <figure class="photoset-item">
-            <a href="#">
+            <a href="https://loremflickr.com/640/360?4">
               <img src="./static/placeholder.png" data-ratio="0.9321" data-src="https://loremflickr.com/640/360?4" />
             </a>
           </figure>
           <figure class="photoset-item">
-            <a href="#">
+            <a href="https://loremflickr.com/640/360?5">
               <img src="./static/placeholder.png" data-ratio="1.2101" data-src="https://loremflickr.com/640/360?5" />
             </a>
           </figure>
           <figure class="photoset-item">
-            <a href="#">
+            <a href="https://loremflickr.com/640/360?6">
               <img src="./static/placeholder.png" data-ratio="1.3333" data-src="https://loremflickr.com/640/360?6" />
             </a>
           </figure>
@@ -158,12 +159,12 @@
         <!-- 2 -->
         <div class="photoset-row">
           <figure class="photoset-item">
-            <a href="#">
+            <a href="https://loremflickr.com/640/360?7">
               <img src="./static/placeholder.png" data-ratio="0.9942" data-src="https://loremflickr.com/640/360?7" />
             </a>
           </figure>
           <figure class="photoset-item">
-            <a href="#">
+            <a href="https://loremflickr.com/640/360?8">
               <img src="./static/placeholder.png" data-ratio="1.2274" data-src="https://loremflickr.com/640/360?8" />
             </a>
           </figure>
@@ -177,5 +178,20 @@
     </section>
 
     <script type="text/javascript" charset="UTF-8" src="./static/script.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="./static/photoswipe.umd.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="./static/photoswipe-lightbox.umd.min.js"></script>
+    <script type="text/javascript">
+      var lightbox = new PhotoSwipeLightbox({
+        gallery: '.photoset',
+        children: 'a',
+        pswpModule: PhotoSwipe,
+        loop: false, 
+        counter: false,
+        arrowPrev: false,
+        arrowNext: false,
+        zoom: false
+      });
+      lightbox.init();
+    </script>
   </body>
 </html>

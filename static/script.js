@@ -109,10 +109,13 @@ function getAbsoluteTop(elem) {
       $images.forEach(function($image) {
         var ratio = parseFloat($image.getAttribute("data-ratio"));
         var width = exactWidth * ratio / totalRatio;
-        console.log(width);
         $image.width = width;
         $image.height = width / ratio;
         $image.src = $image.getAttribute("data-src");
+
+        var parent = $image.parentNode;
+        parent.dataset.pswpWidth = wholeWidth;
+        parent.dataset.pswpHeight = wholeWidth / ratio;
       });
     });
   }

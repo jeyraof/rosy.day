@@ -296,3 +296,14 @@ section .clearfix:after {
   position: relative;
   border: 0;
 }
+
+.pswp__button.pswp__button--close {
+  width: 80px;
+  height: 80px;
+}
+.pswp__button.pswp__button--close .pswp__icn {
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+}
