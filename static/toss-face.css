@@ -1,0 +1,81 @@
+/*
+ * 토스 페이스의 모든 저작권은 토스에 있으며, 본 웨딩 사이트를 위해서 임의로 만든 CSS 와 image 팔레트 입니다.
+*/
+
+:root { 
+  --tf-size-default: 160px; 
+  --tf-size-small: 120px; 
+  --tf-size-xsmall: 80px; 
+  --tf-size-xxsmall: 40px; 
+}
+
+.tf {
+  display: inline-block;
+  background: url('./icon-palette.png') no-repeat;
+  background-size: calc(var(--tf-size-default) * 5) calc(var(--tf-size-default) * 2);
+  width: var(--tf-size-default);
+  height: var(--tf-size-default);
+  background-position-x: calc(-5 * var(--tf-size-default));
+  background-position-y: calc(-2 * var(--tf-size-default));
+}
+.tf.baby            { background-position: 0 0; }
+.tf.boy             { background-position: calc(-1 * var(--tf-size-default)) 0; }
+.tf.man             { background-position: calc(-2 * var(--tf-size-default)) 0; }
+.tf.man-with-tuxido { background-position: calc(-3 * var(--tf-size-default)) 0; }
+.tf.girl            { background-position: calc(-1 * var(--tf-size-default)) calc(-1 * var(--tf-size-default)); }
+.tf.woman           { background-position: calc(-2 * var(--tf-size-default)) calc(-1 * var(--tf-size-default)); }
+.tf.woman-with-veil { background-position: calc(-3 * var(--tf-size-default)) calc(-1 * var(--tf-size-default)); }
+.tf.couple          { background-position: calc(-4 * var(--tf-size-default)) 0; }
+.tf.wedding-hall    { background-position: calc(-4 * var(--tf-size-default)) calc(-1 * var(--tf-size-default)); }
+
+.tf.small {
+  background-size: calc(var(--tf-size-small) * 5) calc(var(--tf-size-small) * 2);
+  width: var(--tf-size-small);
+  height: var(--tf-size-small);
+  background-position-x: calc(-5 * var(--tf-size-small));
+  background-position-y: calc(-2 * var(--tf-size-small));
+}
+.tf.small.baby            { background-position: 0 0; }
+.tf.small.boy             { background-position: calc(-1 * var(--tf-size-small)) 0; }
+.tf.small.man             { background-position: calc(-2 * var(--tf-size-small)) 0; }
+.tf.small.man-with-tuxido { background-position: calc(-3 * var(--tf-size-small)) 0; }
+.tf.small.girl            { background-position: calc(-1 * var(--tf-size-small)) calc(-1 * var(--tf-size-small)); }
+.tf.small.woman           { background-position: calc(-2 * var(--tf-size-small)) calc(-1 * var(--tf-size-small)); }
+.tf.small.woman-with-veil { background-position: calc(-3 * var(--tf-size-small)) calc(-1 * var(--tf-size-small)); }
+.tf.small.couple          { background-position: calc(-4 * var(--tf-size-small)) 0; }
+.tf.small.wedding-hall    { background-position: calc(-4 * var(--tf-size-small)) calc(-1 * var(--tf-size-small)); }
+
+.tf.xsmall {
+  background-size: calc(var(--tf-size-xsmall) * 5) calc(var(--tf-size-xsmall) * 2);
+  width: var(--tf-size-xsmall);
+  height: var(--tf-size-xsmall);
+  background-position-x: calc(-5 * var(--tf-size-xsmall));
+  background-position-y: calc(-2 * var(--tf-size-xsmall));
+}
+.tf.xsmall.baby            { background-position: 0 0; }
+.tf.xsmall.boy             { background-position: calc(-1 * var(--tf-size-xsmall)) 0; }
+.tf.xsmall.man             { background-position: calc(-2 * var(--tf-size-xsmall)) 0; }
+.tf.xsmall.man-with-tuxido { background-position: calc(-3 * var(--tf-size-xsmall)) 0; }
+.tf.xsmall.girl            { background-position: calc(-1 * var(--tf-size-xsmall)) calc(-1 * var(--tf-size-xsmall)); }
+.tf.xsmall.woman           { background-position: calc(-2 * var(--tf-size-xsmall)) calc(-1 * var(--tf-size-xsmall)); }
+.tf.xsmall.woman-with-veil { background-position: calc(-3 * var(--tf-size-xsmall)) calc(-1 * var(--tf-size-xsmall)); }
+.tf.xsmall.couple          { background-position: calc(-4 * var(--tf-size-xsmall)) 0; }
+.tf.xsmall.wedding-hall    { background-position: calc(-4 * var(--tf-size-xsmall)) calc(-1 * var(--tf-size-xsmall)); }
+
+.tf.xxsmall {
+  background-size: calc(var(--tf-size-xxsmall) * 5) calc(var(--tf-size-xxsmall) * 2);
+  width: var(--tf-size-xxsmall);
+  height: var(--tf-size-xxsmall);
+  background-position-x: calc(-5 * var(--tf-size-xxsmall));
+  background-position-y: calc(-2 * var(--tf-size-xxsmall));
+}
+.tf.xxsmall.baby            { background-position: 0 0; }
+.tf.xxsmall.boy             { background-position: calc(-1 * var(--tf-size-xxsmall)) 0; }
+.tf.xxsmall.man             { background-position: calc(-2 * var(--tf-size-xxsmall)) 0; }
+.tf.xxsmall.man-with-tuxido { background-position: calc(-3 * var(--tf-size-xxsmall)) 0; }
+.tf.xxsmall.girl            { background-position: calc(-1 * var(--tf-size-xxsmall)) calc(-1 * var(--tf-size-xxsmall)); }
+.tf.xxsmall.woman           { background-position: calc(-2 * var(--tf-size-xxsmall)) calc(-1 * var(--tf-size-xxsmall)); }
+.tf.xxsmall.woman-with-veil { background-position: calc(-3 * var(--tf-size-xxsmall)) calc(-1 * var(--tf-size-xxsmall)); }
+.tf.xxsmall.couple          { background-position: calc(-4 * var(--tf-size-xxsmall)) 0; }
+.tf.xxsmall.wedding-hall    { background-position: calc(-4 * var(--tf-size-xxsmall)) calc(-1 * var(--tf-size-xxsmall)); }
+

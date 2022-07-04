@@ -1,0 +1,298 @@
+@import url('./pretendard.css');
+@import url('./toss-face.css');
+
+:root {
+  --main-background: rgba(41, 47, 51, 1);
+  --main-color: rgba(255, 255, 255, .8);
+  --playground-background: linear-gradient(
+    0deg, 
+    var(--main-background) 0%, 
+    var(--main-background) 80%, 
+    rgba(41, 47, 51, 0.85) 85%, 
+    rgba(41, 47, 51, 0) 100%
+  );
+  --photoset-item-margin: 2px;
+}
+
+html, body {
+  font-size: 36px;
+  color: var(--main-color);
+  background: var(--main-background);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Pretendard 추천 글꼴 순서 */
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+section { position: relative; }
+
+section .center {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section .wrap {
+  width: 90%!important;
+  max-width: 1400px;
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+section .clearfix:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+#front {
+  height: 100vh;
+}
+
+#front .curtain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+#front .curtain::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url('./front.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 60%;
+  /*background-size: cover;*/
+  opacity: 1.00;
+  content: '';
+}
+
+#front h1 {
+  line-height: 4rem;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+#front h2 {
+  padding: .5rem 0;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+#front p {
+  line-height: 1rem;
+  font-size: 1rem;
+}
+
+#front .next {
+  position: absolute;
+  display: inline-block;
+  width: 3rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  font-size: .8rem;
+  text-align: center;
+  bottom: 14.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 2.2rem;
+}
+
+#front .next span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1.2rem;
+  height: 2rem;
+  margin-left: -.6rem;
+  border: 2px solid #fff;
+  border-radius: 2rem;
+  box-sizing: border-box;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 1rem);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#front .next span::before {
+  position: absolute;
+  top: .4rem;
+  left: 50%;
+  content: '';
+  width: .2rem;
+  height: .2rem;
+  margin-left: -.1rem;
+  background: white;
+  border-radius: 100%;
+  animation: scroll 2s infinite;
+  box-sizing: border-box;
+}
+
+#story-each {
+  padding-bottom: 3vh;
+}
+
+#story-each .content {
+  width: 75%;
+  margin-top: 15vh;
+}
+
+#story-each .content:first-child {
+  margin-top: 10vh;
+}
+
+#story-each .jaeyoung {
+  float: left;
+}
+
+#story-each .soyoung {
+  float: right;
+}
+#story-each .soyoung h3 {
+  text-align: right;
+}
+
+#story-each .together {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#story-each .together h3 {
+  text-align: center;
+}
+
+#story-each h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 0 0 1rem 0;
+  margin: 0;
+}
+
+#story-each .gallery img {
+  display: block;
+  width: 100%;
+  margin-bottom: .5rem;
+  border-radius: 12px;
+}
+
+#story-each p {
+  line-height: 1.5rem;
+  padding: .5rem 0;
+  margin: 0;
+}
+
+#playground-holder {
+  height: 170px;
+}
+
+#playground {
+  width: 100%;
+  height: 160px;
+  z-index: 2;
+  left: 0;
+  position: relative;
+}
+
+#playground .thumb {
+  display: block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin: 0;
+  padding: 50px 40px 30px;
+  transition: right .25s ease-in-out, left .25s ease-in-out, transform .25s ease-in-out;
+}
+
+#playground .thumb.jaeyoung { 
+  left: 0;
+}
+#playground .thumb.soyoung { 
+  right: 0;
+}
+
+#playground.on-story-each {
+  position: fixed;
+  bottom: -1px;
+  background: var(--playground-background);
+}
+
+#story-together {
+  padding: 10vh 0 5vh;
+  min-height: 100vh;
+}
+
+.photoset {
+  width: 100%;
+  overflow: hidden;
+}
+
+.photoset img {
+  max-width: 100%;
+  display: block;
+}
+
+.photoset figure {
+  position: relative;
+  backface-visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.photoset .photoset-row {
+  width: 150%;
+  margin-bottom: calc(2 * var(--photoset-item-margin));
+}
+.photoset .photoset-row:after {
+  clear: both;
+  content: "";
+  display: block;
+  visibility: hidden;
+}
+
+.photoset .photoset-row .photoset-item {
+  display: block;
+  float: left;
+  margin: 0 var(--photoset-item-margin);
+  width: auto;
+}
+
+.photoset .photoset-row .photoset-item:first-child {
+  margin-left: 0;
+}
+.photoset .photoset-row .photoset-item:last-child {
+  margin-right: 0;
+}
+.photoset .photoset-row .photoset-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 0;
+}

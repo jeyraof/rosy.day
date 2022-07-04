@@ -1,0 +1,7 @@
+- Pretendard Font
+  - static/pretendard.css 
+  - static/woff/*
+  - static/woff2/*
+- Toss Face Emoji Image
+  - static/icon-palette.png
+  - 사용할 이미지들을 모아 하나로 합쳤습니다.
