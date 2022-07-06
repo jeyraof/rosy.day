@@ -195,6 +195,22 @@ section .clearfix:after {
   margin: 0;
 }
 
+#story-each .photoset .photoset-row:first-child .photoset-item:first-child img {
+  border-top-left-radius: 2%;
+}
+
+#story-each .photoset .photoset-row:first-child .photoset-item:last-child img {
+  border-top-right-radius: 2%;
+}
+
+#story-each .photoset .photoset-row:last-child .photoset-item:first-child img {
+  border-bottom-left-radius: 2%;
+}
+
+#story-each .photoset .photoset-row:last-child .photoset-item:last-child img {
+  border-bottom-right-radius: 2%;
+}
+
 #story-each .gallery img {
   display: block;
   width: 100%;

@@ -93,12 +93,15 @@ function getAbsoluteTop(elem) {
   var $photosetRows = Array.from(document.getElementsByClassName("photoset-row"));
   var photoMargin = 2;
   function resizeImages(e) {
-    var wholeWidth = document.body.clientWidth;
     $photosetRows.forEach(function($row) {
-      var n = $row.children.length,
+      var $photoSet = $row.parentNode,
+          wholeWidth = $photoSet.offsetWidth,
+          n = $row.children.length,
           exactWidth = wholeWidth - (n - 1) * 2 * photoMargin,
           $images = [],
           totalRatio = 0;
+
+      console.log(wholeWidth);
 
       Array.from($row.children).forEach(function($figure) {
         var image = $figure.children[0].children[0];
