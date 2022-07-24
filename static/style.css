@@ -3,7 +3,7 @@
 
 :root {
   --main-background: rgba(41, 47, 51, 1);
-  --main-color: rgba(255, 255, 255, .8);
+  --main-color: #a9abad;
   --playground-background: linear-gradient(
     0deg, 
     var(--main-background) 0%, 
@@ -29,6 +29,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 section { position: relative; }

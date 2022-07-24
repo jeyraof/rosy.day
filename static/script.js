@@ -86,9 +86,7 @@ function getAbsoluteTop(elem) {
       $syThumb.style.transform = "none";
       $syIcon.classList.add(syIconHolders[syLevel]);
     }
-
   }
-
 
   var $photosetRows = Array.from(document.getElementsByClassName("photoset-row"));
   var photoMargin = 2;
@@ -100,8 +98,6 @@ function getAbsoluteTop(elem) {
           exactWidth = wholeWidth - (n - 1) * 2 * photoMargin,
           $images = [],
           totalRatio = 0;
-
-      console.log(wholeWidth);
 
       Array.from($row.children).forEach(function($figure) {
         var image = $figure.children[0].children[0];
