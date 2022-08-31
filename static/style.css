@@ -11,6 +11,8 @@
     rgba(41, 47, 51, 0) 100%
   );
   --photoset-item-margin: 2px;
+  --pink-background: rgba(241, 232, 223, 1);
+  --pink-color: rgb(32, 66, 49);
 }
 
 html, body {
@@ -258,18 +260,27 @@ section .clearfix:after {
 }
 
 #story-together {
-  padding: 10vh 0 5vh;
+  padding: 10vh 0 0;
   min-height: 100vh;
 }
 
-#wedding-photo {
+#pink-background {
+  background: var(--pink-background);
+  color: var(--pink-color);
+}
 
+
+#wedding-photo {
+  padding: 10vh 0;
+}
+
+
+#wedding-photo p {
+  margin: 0;
 }
 
 #location {
   padding: 50px;
-  background: rgba(241, 232, 223, 1);
-  color: rgb(32, 66, 49);
 }
 
 #location #image-map {
