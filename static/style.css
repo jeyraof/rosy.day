@@ -4,8 +4,7 @@
 :root {
   --main-background: rgba(41, 47, 51, 1);
   --main-color: #a9abad;
-  --playground-background: linear-gradient(
-    0deg, 
+  --playground-background: linear-gradient( 0deg, 
     var(--main-background) 0%, 
     var(--main-background) 80%, 
     rgba(41, 47, 51, 0.85) 85%, 
@@ -261,6 +260,67 @@ section .clearfix:after {
 #story-together {
   padding: 10vh 0 5vh;
   min-height: 100vh;
+}
+
+#wedding-photo {
+
+}
+
+#location {
+  padding: 50px;
+  background: rgba(241, 232, 223, 1);
+  color: rgb(32, 66, 49);
+}
+
+#location #image-map {
+  width: 95%;
+  margin: 50px auto;
+  display: block;
+}
+
+#location p {
+  font-size: .8rem;
+  line-height: 1.2rem;
+  margin: 0;
+  text-align: center;
+}
+
+#location ul {
+  margin: 50px auto 0;
+  padding: 0;
+  width: 80%;
+
+  list-style: none;
+}
+
+#location ul:after {
+  clear: both;
+  content: "";
+  display: block;
+  visibility: hidden;
+}
+
+#location ul li {
+  float: left;
+  width: 46%;
+  padding: 0 2%;
+}
+
+
+#location ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  background: #204231;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+
+#location ul li a:hover {
+  background: #0c7c44;
+  border: 1px solid #4f4f4f;
 }
 
 .photoset {
