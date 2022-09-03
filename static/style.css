@@ -42,7 +42,7 @@ section { position: relative; }
 
 section .center {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -79,30 +79,47 @@ section .clearfix:after {
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: url('./front.png');
+  background-image: url('./front.jpg');
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 60%;
-  /*background-size: cover;*/
-  opacity: 1.00;
+  background-position: center center;
+  background-size: cover;
+  opacity: .8;
   content: '';
 }
 
 #front h1 {
   line-height: 4rem;
   font-size: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: .5rem;
+  text-align: center;
 }
 
 #front h2 {
-  padding: .5rem 0;
+  padding: .2rem 0;
   line-height: 2rem;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 #front p {
   line-height: 1rem;
   font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+#front .overlay {
+  position: absolute;
+  background: linear-gradient(
+    rgba(41,47,51,0) 0,
+    rgba(41,47,51,.5) 33%,
+    rgba(41,47,51,.77) 70%,
+    rgba(41,47,51,1) 100%
+  );
+  height: 40vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 #front .next {
@@ -163,6 +180,7 @@ section .clearfix:after {
 }
 
 #story-each {
+  margin-top: 5vh;
   padding-bottom: 3vh;
 }
 
@@ -264,6 +282,24 @@ section .clearfix:after {
   min-height: 100vh;
 }
 
+#black-to-pink {
+  color: var(--main-color);
+  text-align: center;
+  font-size: .8rem;
+  padding: 5vh 0;
+}
+
+#black-to-pink .icon-tray {
+  padding: 0 0 5vh;
+}
+
+#black-to-pink .wedding-icon {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #pink-background {
   background: var(--pink-background);
   color: var(--pink-color);
@@ -271,16 +307,39 @@ section .clearfix:after {
 
 
 #wedding-photo {
-  padding: 10vh 0;
+  padding: 10vh 0 5vh;
+  font-size: .8rem;
+  text-align: center;
 }
 
 
-#wedding-photo p {
+#wedding-photo .photoset {
+  margin-top: 5vh;
+}
+
+#welcome {
+  padding: 5vh 0 5vh;
+}
+
+#welcome h4 {
+  color: var(--pink-color);
+  text-align: center;
+}
+
+#welcome p {
+  font-size: .8rem;
+  line-height: 1.2rem;
   margin: 0;
+  text-align: center;
 }
 
 #location {
-  padding: 50px;
+  padding: 5vh 100px;
+}
+
+#location h4 {
+  color: var(--pink-color);
+  text-align: center;
 }
 
 #location #image-map {
@@ -330,6 +389,45 @@ section .clearfix:after {
 }
 
 #location ul li a:hover {
+  background: #0c7c44;
+  border: 1px solid #4f4f4f;
+}
+
+
+#congratulatory {
+  padding: 5vh 0;
+}
+
+#congratulatory h4 {
+  color: var(--pink-color);
+  text-align: center;
+}
+
+#congratulatory table {
+  font-size: .8rem;
+  margin: 2vh auto 0;
+}
+
+#congratulatory table td {
+  line-height: 1.5rem;
+  padding: .5rem 1vh;
+}
+
+
+#congratulatory table td .copy-btn {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #204231;
+  color: #ffffff;
+  line-height: 1rem;
+  padding: .25rem .5rem;
+  margin: 0 0 0 .5rem;;
+  vertical-align: top;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+#congratulatory table td .copy-btn:hover {
   background: #0c7c44;
   border: 1px solid #4f4f4f;
 }

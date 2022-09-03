@@ -13,6 +13,14 @@ function getAbsoluteTop(elem) {
 }
 
 (function() {
+
+  // clipboard.js
+  var clipboard = new ClipboardJS('.copy-btn');
+  clipboard.on('success', function(e) {
+    alert('`' + e.text + '` 복사 되었습니다.');
+    e.clearSelection();
+  });
+
   var $pgHolder = document.getElementById("playground-holder");
   var $pg = document.getElementById("playground");
   var $storyEach = document.getElementById("story-each");
