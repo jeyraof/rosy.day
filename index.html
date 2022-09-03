@@ -456,10 +456,10 @@
         <p>&nbsp;</p>
 
         <p>
-          <b>이동명</b> <b>김호숙</b> 의 장남 <b>재영</b>
+          <b>이동명</b> · <b>김호숙</b> 의 장남 <b>재영</b>
         </p>
         <p>
-          <b>조창호</b> <b>노경숙</b> 의 차녀 <b>소영</b>
+          <b>조창호</b> · <b>노경숙</b> 의 차녀 <b>소영</b>
         </p>
       </section>
   
@@ -513,11 +513,12 @@
       </section>
     </div>
 
-    <script type="text/javascript" charset="UTF-8" src="./static/clipboard.min.js"></script>
     <script type="text/javascript" charset="UTF-8" src="./static/script.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="./static/clipboard.min.js"></script>
     <script type="text/javascript" charset="UTF-8" src="./static/photoswipe.umd.min.js"></script>
     <script type="text/javascript" charset="UTF-8" src="./static/photoswipe-lightbox.umd.min.js"></script>
     <script type="text/javascript">
+      // lightbox
       var lightbox = new PhotoSwipeLightbox({
         gallery: '.photoset',
         children: 'a',
@@ -529,6 +530,13 @@
         zoom: false
       });
       lightbox.init();
+
+      // cliipboard.js
+      var cliipboard = new ClipboardJS('.copy-btn');
+      clipboard.on('success', function(e) {
+        alert("'" + e.text + "' 복사 되었습니다.");
+        e.clearSelection();
+      });
     </script>
   </body>
 </html>
