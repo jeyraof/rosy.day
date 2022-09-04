@@ -15,6 +15,10 @@
   --pink-color: rgb(32, 66, 49);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   font-size: 36px;
   color: var(--main-color);
@@ -24,8 +28,9 @@ html, body {
   min-height: 100vh;
   /* Pretendard 추천 글꼴 순서 */
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -130,10 +135,14 @@ section .clearfix:after {
   line-height: 1.4rem;
   font-size: .8rem;
   text-align: center;
-  bottom: 14.5vh;
-  left: 50%;
-  transform: translateX(-50%);
+
+  right: 5%;
+
+  top: 50%;
+  transform: translateY(-50%);
   padding-top: 2.2rem;
+
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #front .next span {
@@ -143,7 +152,7 @@ section .clearfix:after {
   width: 1.2rem;
   height: 2rem;
   margin-left: -.6rem;
-  border: 2px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 2rem;
   box-sizing: border-box;
 }
@@ -177,6 +186,54 @@ section .clearfix:after {
   border-radius: 100%;
   animation: scroll 2s infinite;
   box-sizing: border-box;
+}
+
+#front a.go-to-wedding {
+  display: block;
+  font-size: .8rem;
+  line-height: 1.4rem;
+  width: 3rem;
+  height: 1.4rem;
+
+  padding-top: 2.2rem;
+
+  position: absolute;
+  bottom: 15.5vh;
+  left: 15%;
+}
+
+#front a.go-to-wedding img {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.5rem;
+  color: #fff;
+}
+
+#front a.go-to-welcome {
+  display: block;
+  font-size: .8rem;
+  line-height: 1.4rem;
+  width: 3rem;
+  height: 1.4rem;
+
+  padding-top: 2.2rem;
+
+  position: absolute;
+  bottom: 15.5vh;
+  right: 15%;
+}
+
+#front a.go-to-welcome img {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1.5rem;
+  color: #fff;
 }
 
 #story-each {

@@ -146,4 +146,28 @@ function getAbsoluteTop(elem) {
       updatePlayground(e2);
     });
   });
+
+  // goto
+  document.addEventListener('click', function(e) {
+    if (!e.target) { return }
+
+    var $a = e.target.closest('a');
+    if ($a && $a.classList.contains('go-to')) {
+      e.preventDefault();
+
+      var href = $a.getAttribute('href');
+      var marginTop = $a.getAttribute('data-margin-top');
+      var $target = document.getElementById(href.replace('#', ''));
+      if ($target) {
+        var targetTop = getAbsolutePosition($target).top;
+        if (marginTop) { targetTop -= parseFloat(marginTop) }
+
+        scroll({
+          top: targetTop,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+
 }).call(this);
