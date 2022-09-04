@@ -328,7 +328,7 @@ section .clearfix:after {
   right: 0;
 }
 
-#playground.on-story-each {
+.on-story-each #playground {
   position: fixed;
   bottom: -1px;
   background: var(--playground-background);
@@ -412,6 +412,11 @@ section .clearfix:after {
   text-align: center;
 }
 
+#location .tel {
+  text-decoration: underline;
+  color: var(--pink-color);
+}
+
 #location ul {
   margin: 50px auto 0;
   padding: 0;
@@ -489,6 +494,16 @@ section .clearfix:after {
   border: 1px solid #4f4f4f;
 }
 
+#thanks-to {
+  padding: 5vh 0;
+  font-size: .8rem;
+  text-align: center;
+}
+
+#thanks-to .rose {
+  color: #FF0080;
+}
+
 .photoset {
   width: 100%;
   overflow: hidden;
@@ -547,4 +562,36 @@ section .clearfix:after {
   height: 80px;
   top: 0;
   left: 0;
+}
+
+a.go-to-top {
+  z-index: 9999;
+  position: fixed;
+  display: block;
+  background: rgba(25, 25, 25, .6);
+  color: #ffffff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  bottom: .7rem;
+  right: -10rem;
+  font-size: .6rem;
+  text-align: center;
+  transition: bottom .2s ease-in-out, right .2s ease-in-out;
+}
+
+a.go-to-top img {
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: .5rem auto 0;
+}
+
+body.after-story-each a.go-to-top {
+  right: .7rem;
+}
+
+body.on-story-each a.go-to-top {
+  bottom: 160px;
+  right: .7rem;
 }

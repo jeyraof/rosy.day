@@ -13,6 +13,7 @@ function getAbsoluteTop(elem) {
 }
 
 (function() {
+  var $body = document.body;
   var $pgHolder = document.getElementById("playground-holder");
   var $pg = document.getElementById("playground");
   var $storyEach = document.getElementById("story-each");
@@ -37,13 +38,19 @@ function getAbsoluteTop(elem) {
 
     // Story 의 영역을 결정하는 위치가 story 영역 안쪽에 있을 때 Placeholder 노출을 결정
     var storyEachToken = "on-story-each";
+    var storyAfterToken = "after-story-each";
     var storyEachDecider = window.innerHeight + window.scrollY;
     var storyEachPosition = getAbsolutePosition($storyEach);
     if (storyEachDecider > storyEachPosition.top + 1 && storyEachDecider <= pgHolderPosition.bottom) {
-      $pg.classList.add(storyEachToken);
+      $body.classList.add(storyEachToken);
+      $body.classList.remove(storyAfterToken);
+    } else if (storyEachDecider > pgHolderPosition.bottom) {
+      $body.classList.remove(storyEachToken);
+      $body.classList.add(storyAfterToken);
     } else {
-      $pg.classList.remove(storyEachToken);
-    }
+      $body.classList.remove(storyEachToken);
+      $body.classList.remove(storyAfterToken);
+     }
 
     var togetherContentTop = getAbsoluteTop($togetherContent);
 
