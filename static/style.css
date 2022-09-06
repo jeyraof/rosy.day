@@ -504,6 +504,22 @@ section .clearfix:after {
   color: #FF0080;
 }
 
+#thanks-to a {
+  display: block;
+}
+
+#thanks-to .share {
+  display: inline-block;
+  margin: 0 auto 5vh;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #204231;
+  color: #ffffff;
+  line-height: 1rem;
+  padding: .25rem .5rem;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
 .photoset {
   width: 100%;
   overflow: hidden;
@@ -564,7 +580,9 @@ section .clearfix:after {
   left: 0;
 }
 
-a.go-to-top {
+body > a.go-to-top, 
+body > a.share 
+{
   z-index: 9999;
   position: fixed;
   display: block;
@@ -579,19 +597,31 @@ a.go-to-top {
   text-align: center;
   transition: bottom .2s ease-in-out, right .2s ease-in-out;
 }
+body > a.share {
+  bottom: calc(3rem + .7rem + .7rem);
+}
 
-a.go-to-top img {
+body > a.go-to-top img, 
+body > a.share img {
   display: block;
   width: 1.4rem;
   height: 1.4rem;
   margin: .5rem auto 0;
 }
 
-body.after-story-each a.go-to-top {
+body.after-story-each > a.go-to-top,
+body.after-story-each > a.share
+{
   right: .7rem;
 }
 
-body.on-story-each a.go-to-top {
+body.on-story-each > a.go-to-top {
+  right: .7rem;
   bottom: 160px;
+}
+body.on-story-each > a.share
+{
+  bottom: calc(3rem + .7rem + 160px);
   right: .7rem;
 }
+

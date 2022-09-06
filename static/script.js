@@ -159,7 +159,10 @@ function getAbsoluteTop(elem) {
     if (!e.target) { return }
 
     var $a = e.target.closest('a');
-    if ($a && $a.classList.contains('go-to')) {
+    if (!$a) { return }
+
+
+    if ($a.classList.contains('go-to')) {
       e.preventDefault();
 
       var href = $a.getAttribute('href');
@@ -174,6 +177,13 @@ function getAbsoluteTop(elem) {
           behavior: 'smooth'
         });
       }
+    } else if ($a.classList.contains('share')) {
+      e.preventDefault();
+      window.navigator.share({
+        title: '2022.10.01. 이재영♥조소영 결혼합니다',
+        text: '서로를 보듬어주고 지켜주며 다져온 인연을 이제는 부부로서 이어가고자 합니다. 눈부시게 푸르른 가을 하늘 아래 새로이 함께하는 저희 두 사람의 모습을 축복의 박수로 격려 부탁드립니다.',
+        url: '',
+      });
     }
   });
 
